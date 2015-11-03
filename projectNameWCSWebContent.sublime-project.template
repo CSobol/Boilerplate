@@ -1,0 +1,16 @@
+{
+	"folders":
+	[
+		{
+			"path": "/path/to/project/root"
+		}
+	],
+  "build_systems" :
+  [
+    {
+    "cmd": ["/path/to/local/ant/install resolve-deps COPY_ASSETS_TO_JSK_WORKSPACE csdt_IMPORT_ALL_CODE_OBJECTS -buildfile /path/to/project/build.xml"],
+    "name": "Ant WCS",
+    "shell": true
+    }
+  ]
+}

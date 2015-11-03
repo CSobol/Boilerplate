@@ -1,0 +1,8 @@
+/build
+build-local.properties
+./.DS_Store
+/.sass-cache
+.css
+siteName/.sass-cache
+siteName/css
+siteName/sass/.sass-cache
