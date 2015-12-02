@@ -1,4 +1,4 @@
-<project name="AcromaProWCSWebContent">		
+<project name="projectWCSWebContent">		
 
 	<property file= "build.properties" />
 	
@@ -8,10 +8,11 @@
 	</target>
 	
 	<target name="copy-webcontent-files" depends="compile-sass">
-		<copy todir="${build.dir}">
+		<copy todir="${dir.dist.home}">
 			<fileset dir="${web.content}">
 			<exclude name="**/*.scss"/>
 			<exclude name="*.xml"/>
+			<exclude name="**/.sass-cache/**"/>
 			<exclude name="*.properties"/>
 			<exclude name="**/*.rb"/>
 			</fileset>
@@ -29,7 +30,7 @@
 	<target name="compile-sass" description="Compile and minify CSS">
 			<echo message= "Running Compass" />
 			<exec executable="compass" failonerror="true">
-				<arg line="compile ${SRC_SCSS_DIR} -c ${SRC_SCSS_DIR}/config.rb --force --trace"></arg>
+				<arg line="compile ${SRC_SCSS_DIR} -c ${web.content}/config.rb --force --trace"></arg>
 			</exec>
 	</target>
 

@@ -1,0 +1,20 @@
+{
+  "name" : "SherwinDBGFGLAGboilerplate",
+  "version" : "0.0.1",
+  "description" : "Collection of files for rapidly bootstrapping a DB/GFG project",
+  "author" : "Chris Sobolewski"
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.sherwin.com/Corp-IS-GFG/WebContentBoilerplate.git"
+  },
+  "devDependencies" : {
+    "grunt": "*",
+    "grunt-browser-sync": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-karma": "*",
+    "grunt-sync": "*"
+  }
+}
