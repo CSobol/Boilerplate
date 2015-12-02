@@ -1,5 +1,5 @@
 {
-  "path" : "static/swsitename",
-  "projectName" : "swProjectName",
-  "build" : "/Users/swcontractor/Library/Oracle/JSK/App_Server/apache-tomcat-7.0.42/Sites/webapps/static/swsitename"
+"path" : "static/test2", 
+"projectName" : "test2", 
+"build" : "/System/Library/Oracle/JSK/App_Server/apache-tomcat-7.0.42/Sites/webapps/static/test2"
 }

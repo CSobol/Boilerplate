@@ -1,10 +1,13 @@
 module.exports = function(grunt){
+
+  "use strict";
   //grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-sync');
 
+ console.log(grunt.file.readJSON('config.json'));
 
   grunt.initConfig({
     env: grunt.file.readJSON('config.json'),
@@ -17,15 +20,17 @@ module.exports = function(grunt){
      }, //uglify*/
     compass: {
         dev: {
-            cssDir: '<%= env.path %>/css',
-            sassDir: '<%= env.path %>/sass',
             javascriptsDir: '<%= env.path %>/js',
             outputStyle: ':expanded',
-            relativeAssets: true
-        }, //dev
-        options:{
-          raw: 'require "bootstrap-sass"\nSass::Script::Number.precision = 10\n'
-        } //options
+            relativeAssets: true,
+            options: {
+              basePath : '<%= env.path %>/',
+              config: '<%= env.path %>/config.rb'
+            }
+        } //dev
+        // options:{
+        //   raw: 'require "bootstrap-sass"\nSass::Script::Number.precision = 10\n'
+        // } //options
     }, //compass
     browserSync: {
         bsFiles: {
